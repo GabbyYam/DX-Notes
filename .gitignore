@@ -1,0 +1,9 @@
+#dir
+.vs/
+Debug
+DX-Notes
+x64
+
+#files
+DXSDK_Jun10.exe
+DX-Notes.sln
