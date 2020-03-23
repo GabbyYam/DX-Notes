@@ -12,7 +12,7 @@
 
 
 
-# 1.Shader
+# 1. 着色器 Shader
 
 什么是Shader？翻译过来就是着色器，用来给像素上色，Shader分为两种：
 
@@ -27,9 +27,7 @@ Shader怎么玩？基本上就是分为以下三步
 
 
 
-一般用到以下几个API
-
-## Compile From .shader file 编译源文件
+## 编译源文件 Compile From .shader file 
 
 ```cpp
 //编译API
@@ -55,7 +53,7 @@ ID3D10Blob *VS; // 存放编译后代码的Blob
 D3DX11CompileFromFile("shaders.shader", 0, 0, "VShader", "vs_4_0", 0, 0, 0, &VS, 0, 0);
 ```
 
-## Encapsulate 封装对象
+## 封装对象 Encapsulate 
 
 ```cpp
 // shader对象
@@ -84,7 +82,7 @@ devcon->PSSetShader(pPS, 0, 0);
 
 
 
-# 2.Vertex Buffer 顶点缓存
+# 2.顶点缓存 Vertex Buffer 
 
 前面其实也有说过，Vertex Buffer就是用来存顶点信息的，顶点除了位置，还有其他东西，比如颜色，而Vertex Buffer就是用来存放这些信息的
 
@@ -172,7 +170,7 @@ D3D11_INPUT_ELEMENT_DESC ied[] =
 ID3D11InputLayout *pLayout;    // global
 
 HRESULT CreateInputLayout(
-    D3D11_INPUT_ELEMENT_DESC *pInputElementDescs, //input element
+    D3D11_INPUT_ELEMENT_DESC *pInputElementDescs, //input elements
     UINT NumElements,                             //elements的个数
     void *pShaderBytecodeWithInputSignature,      //shader 地址
     SIZE_T BytecodeLength,                        //shader size
